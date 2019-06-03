@@ -1,0 +1,877 @@
+/* 
+                                               /$$               /$$                           /$$
+                                              | $$              | $$                          | $$
+  /$$$$$$$ /$$  /$$  /$$  /$$$$$$   /$$$$$$  /$$$$$$    /$$$$$$$| $$  /$$$$$$  /$$   /$$  /$$$$$$$
+ /$$_____/| $$ | $$ | $$ /$$__  $$ /$$__  $$|_  $$_/   /$$_____/| $$ /$$__  $$| $$  | $$ /$$__  $$
+|  $$$$$$ | $$ | $$ | $$| $$$$$$$$| $$$$$$$$  | $$    | $$      | $$| $$  \ $$| $$  | $$| $$  | $$
+ \____  $$| $$ | $$ | $$| $$_____/| $$_____/  | $$ /$$| $$      | $$| $$  | $$| $$  | $$| $$  | $$
+ /$$$$$$$/|  $$$$$/$$$$/|  $$$$$$$|  $$$$$$$  |  $$$$/|  $$$$$$$| $$|  $$$$$$/|  $$$$$$/|  $$$$$$$
+|_______/  \_____/\___/  \_______/ \_______/   \___/   \_______/|__/ \______/  \______/  \_______/
+                                                                                                                                                                                    
+*/
+/* _____________________________________________________________ */
+/*                            TABLE                              */
+/* 
+
+-> IMPORT
+-> GENERAL
+    - Text configuration 
+-> NAVIGATION
+    - Main Menu
+    - Accueil ACTIVE
+    - Nos Services ACTIVE
+    - Porfolio ACTIVE
+    - A Propos ACTIVE
+    - Contact ACTIVE
+    - Social Nav
+    - LOGO
+-> PAGES SECTION
+    - Homepage
+    - Nos Services
+    - Portfolio
+    - A propos
+    - contact
+-> VIDEO LIGHTBOX
+
+*/
+/*                                                               */
+/* _____________________________________________________________ */
+
+
+/* _____________________________________________________________ */
+/*                            IMPORT                             */
+
+/* IMPORT */
+
+@import url('https://fonts.googleapis.com/css?family=Sacramento');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@font-face {
+    font-family: 'MyWebFont';
+    src: url('WebFont.eot');
+    src: url('WebFont.eot?iefix') format('eot'), url('WebFont.woff') format('woff'), url('WebFont.ttf') format('truetype'), url('WebFont.svg#webfont') format('svg');
+}
+
+/*                                                               */
+/* _____________________________________________________________ */
+
+
+
+/* _____________________________________________________________ */
+/*                            GENERAL                            */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/*                      Text configuration                       */
+h2 {
+    text-align: center;
+    font-size: 3vw;
+    font-family: roboto;
+    font-weight: bold;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1vw;
+    margin: 1% 0;
+}
+
+
+.windows-size {
+    height: 100vh;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+}
+
+.centerY {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.centerX {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.auto-height {
+    display: flex;
+}
+
+
+
+.colorWhite {
+    color: white !important;
+}
+
+/* HOMEPAGE */
+
+#homepage {
+    height: 100vh;
+    background: url('../images/nuages.jpg') no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+/* _____________________________________________________________ */
+/*                          NAVIGATION                           */
+
+.nav {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.nav-color {
+    background: rgba(0,0,0,.5);
+    box-shadow: 0 0 10px;
+}
+
+.nav-width {
+    width: 80%;
+    margin: auto;
+}
+
+
+/*                          Main Menu                            */
+nav.main-menu {
+    float: right;
+    transform: translateY(15%);
+    height: 50px;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    float: left;
+}
+
+nav.main-menu li a, .social-menu ul li p {
+    font-family: roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000000;
+    text-shadow: 0 0 10px white;
+}
+
+nav.main-menu li {
+    padding: 10px 0 0 0;
+    text-align: center;
+    width: 110px;
+}
+
+
+
+/*                         Accueil ACTIVE                        */
+.line {
+    position: relative;
+    top: 40px;
+    width: 110px;
+    height: 3px;
+    background-color: cornflowerblue;
+    transition: all 1s ease-in-out;
+}
+
+nav.main-menu li:nth-child(2):hover~.line {
+    transform: translate(110px);
+    transition: all .4s ease-in-out;
+}
+
+nav.main-menu li:nth-child(3):hover~.line {
+    transform: translate(220px);
+    transition: all .4s ease-in-out;
+}
+
+nav.main-menu li:nth-child(4):hover~.line {
+    transform: translate(330px);
+    transition: all .4s ease-in-out;
+}
+
+nav.main-menu li:nth-child(5):hover~.line {
+    transform: translate(440px);
+    transition: all .4s ease-in-out;
+}
+
+
+/*                      Nos Services ACTIVE                      */
+.line-nos-services {
+    position: relative;
+    left: 110px;
+    top: 40px;
+    width: 110px;
+    height: 3px;
+    background-color: cornflowerblue;
+    transition: all 1s ease-in-out;
+}
+
+nav.main-menu li:nth-child(1):hover~.line-nos-services {
+    transform: translate(-110px);
+    transition: all .4s ease-in-out;
+}
+
+nav.main-menu li:nth-child(3):hover~.line-nos-services {
+    transform: translate(110px);
+    transition: all .4s ease-in-out;
+}
+
+nav.main-menu li:nth-child(4):hover~.line-nos-services {
+    transform: translate(220px);
+    transition: all .4s ease-in-out;
+}
+
+nav.main-menu li:nth-child(5):hover~.line-nos-services {
+    transform: translate(330px);
+    transition: all .4s ease-in-out;
+}
+
+
+/*                        Porfolio ACTIVE                        */
+.line-portfolio {
+    position: relative;
+    left: 220px;
+    top: 40px;
+    width: 110px;
+    height: 3px;
+    background-color: cornflowerblue;
+    transition: all 1s ease-in-out;
+}
+
+nav.main-menu li:nth-child(2):hover~.line-portfolio {
+    transform: translate(-110px);
+    transition: all .4s ease-in-out;
+}
+
+nav.main-menu li:nth-child(1):hover~.line-portfolio {
+    transform: translate(-220px);
+    transition: all .4s ease-in-out;
+}
+
+nav.main-menu li:nth-child(4):hover~.line-portfolio {
+    transform: translate(110px);
+    transition: all .4s ease-in-out;
+}
+
+nav.main-menu li:nth-child(5):hover~.line-portfolio {
+    transform: translate(220px);
+    transition: all .4s ease-in-out;
+}
+
+
+
+/*                         A Propos ACTIVE                       */
+.line-a-propos {
+    position: relative;
+    left: 330px;
+    top: 40px;
+    width: 110px;
+    height: 3px;
+    background-color: cornflowerblue;
+    transition: all 1s ease-in-out;
+}
+
+nav.main-menu li:nth-child(3):hover~.line-a-propos {
+    transform: translate(-110px);
+    transition: all .4s ease-in-out;
+}
+
+nav.main-menu li:nth-child(2):hover~.line-a-propos {
+    transform: translate(-220px);
+    transition: all .4s ease-in-out;
+}
+
+nav.main-menu li:nth-child(1):hover~.line-a-propos {
+    transform: translate(-330px);
+    transition: all .4s ease-in-out;
+}
+
+nav.main-menu li:nth-child(5):hover~.line-a-propos {
+    transform: translate(110px);
+    transition: all .4s ease-in-out;
+}
+
+
+
+/*                         Contact ACTIVE                        */
+.line-contact {
+    position: relative;
+    left: 440px;
+    top: 40px;
+    width: 110px;
+    height: 3px;
+    background-color: cornflowerblue;
+    transition: all 1s ease-in-out;
+}
+
+nav.main-menu li:nth-child(4):hover~.line-contact {
+    transform: translate(-110px);
+    transition: all .4s ease-in-out;
+}
+
+nav.main-menu li:nth-child(3):hover~.line-contact {
+    transform: translate(-220px);
+    transition: all .4s ease-in-out;
+}
+
+nav.main-menu li:nth-child(2):hover~.line-contact {
+    transform: translate(-330px);
+    transition: all .4s ease-in-out;
+}
+
+nav.main-menu li:nth-child(1):hover~.line-contact {
+    transform: translate(-440px);
+    transition: all .4s ease-in-out;
+}
+
+
+
+/*                          Social Nav                           */
+nav.social-menu {
+    position: fixed;
+    top: 20px;
+    right: 10%;
+}
+
+nav.social-menu ul li {
+    padding: 11px 10px;
+}
+
+.social-menu ul li a {
+    text-decoration: none;
+    color: cornflowerblue;
+}
+
+.social-menu ul li a:hover {
+    color: #000000;
+}
+
+
+
+/*                             LOGO                              */
+img.logo {
+    height: 50px;
+    width: auto;
+}
+
+/*                                                               */
+/* _____________________________________________________________ */
+
+
+/* RESPONSIVE */
+
+/* @media(max-width: 1140px) {
+    nav.main-menu {
+        position: fixed;
+        top: 60px;
+        left: 4%;
+    }
+    nav.social-menu {
+        position: fixed;
+        top: 60px;
+        right: 10%;
+    }
+}
+
+@media(max-width: 900px) {
+    nav.main-menu {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        width: fit-content;
+    }
+    nav.social-menu {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+    }
+}
+
+@media(max-width: 550px) {
+    .line, .line-nos-services, .line-portfolio, .line-a-propos, .line-contact {
+        display: none;
+    }
+    nav.main-menu li:hover {
+        border-bottom: 1px solid black;
+    }
+    .active-page {
+        border: 1px solid #000000;
+        border-radius: 4px;
+    }
+} */
+
+
+/*                                                               */
+/* _____________________________________________________________ */
+
+
+
+/* _____________________________________________________________ */
+/*                        PAGES SECTION                          */
+
+
+
+/*                           Homepage                            */
+
+.homepage-title {
+    width: 80%;
+    width: auto; /* IE */
+    margin: auto;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.homepage-title h1 {
+    font-family: 'MyWebFont', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 6vw;
+    line-height: 81px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.homepage-title h2 {
+    font-family: Sacramento;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 4vw;
+    line-height: 80px;
+    text-align: center;
+    color: #000000;
+    text-decoration: none;
+    text-shadow: 0 0 10px white;
+}
+
+
+
+/*                         Nos Services                          */
+#nos-services {
+    background-color: #E9FAFD;
+    overflow-y: hidden;
+}
+
+
+.columns h3 {
+    font-size: 1.7vw;
+    height: 4vw;
+}
+
+.columns {
+    float: left;
+    width: 21%;
+    padding: 2%;
+    text-align: center;
+}
+
+.columns img {
+    width: 50%;
+}
+
+.columns p {
+    text-align: justify;
+}
+
+.columns ul {
+    margin: 5% 0;
+    list-style: none;
+    height: 8vw;
+}
+
+.columns ul li {
+    text-align: center;
+    padding: 1% 0;
+    font-size: 1.55vw;
+}
+
+.columns hr {
+    width: 40%;
+    margin: auto;
+}
+
+.vertical-align {
+    height: 20vw;
+    width: 1px;
+    background: rgba(0,0,0,.2);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 0 3px black;
+}
+
+.vertical-align:last-child {
+    width: .8px;
+}
+
+
+
+/*                          Portfolio                           */
+#portfolio {
+    /*background-color: #C8E6E2;*/
+    overflow-y: hidden;
+    background:linear-gradient(#6ca3d2,#cfcfcf);
+}
+
+
+
+/*                          A propos                            */
+#a-propos {
+    background-color: #DDE8FE;
+    overflow-y: hidden;
+}
+
+#a-propos .columns {
+    float: left;
+    width: 25%;
+    padding: 0;
+    margin-top: 1vw;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    background: rgba(255,255,255);
+
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1); 
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1); 
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1);
+}
+
+.card:hover {
+    box-shadow: 0px 0px 150px #000000;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.01);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.01);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.01);
+    transition: all 200ms ease-in;
+    transform: scale(1.01);
+}
+
+.card img {
+    height: 10vw;
+    width: auto;
+}
+
+.card p {
+    text-align: inherit;
+}
+
+.card h1 {
+    font-size: 1.55vw;
+}
+
+.title {
+    color: grey;
+    font-size: 1.179vw;
+}
+
+.title-web-site {
+    color: gray !important;
+    font-size: 0.8vw !important;
+}
+
+.info {
+    height: 10vw;
+    position: relative;
+}
+
+.info p {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: auto 5%;
+}
+
+button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #00004d;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.179vw;
+}
+
+#a-propos a {
+    text-decoration: none;
+    font-size: 1vw;
+    color: white;
+}
+
+button:hover, #a-propos  a:hover {
+    opacity: 0.7;
+}
+
+
+
+/*                          contact                           */
+#contact {
+    /*background-color: #C8D9E6;*/
+    overflow-y: hidden;
+    background: linear-gradient(#cfcfcf,#6ca3d2);
+    text-align: center;
+}
+
+form input {
+    background: none;
+    border: none;
+    border-bottom: 2px solid black;
+    width: 20%;
+    margin: 2% 1% 1%;
+}
+
+textarea {
+    background: none;
+    width: 42.25%;
+    border: none;
+    border-bottom: 2px solid;
+}
+
+
+/*                                                               */
+/* _____________________________________________________________ */
+
+
+/* _____________________________________________________________ */
+/*                            FOOTER                             */
+footer {
+    height: 40px;
+}
+
+footer div {
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/*                                                               */
+/* _____________________________________________________________ */
+
+
+/* _____________________________________________________________ */
+/*                         RESPONSIVE                            */
+
+
+@media(max-width: 768px) {
+
+    * {
+        font-size: inherit !important;
+    }
+
+    p {
+        margin: 5% 0;
+    }
+
+    .windows-size {
+        height: inherit;
+    }
+
+    .centerY {
+        top: inherit;
+        transform: inherit;
+    }
+
+    .relative {
+        position: inherit;
+    }
+
+    nav.main-menu li {
+        width: 12vw;
+    }
+
+    nav.main-menu li a, .social-menu ul li p {
+        font-size: 1.5vw !important;
+    }
+
+    .line,
+    .line-nos-services,
+    .line-portfolio,
+    .line-a-propos,
+    .line-contact {
+        display: none;
+    }
+
+    .columns {
+        float: none;
+        width: fit-content;
+        border-bottom: 1px solid;
+    }
+
+    .columns:last-child {
+        border-bottom: none;
+    }
+
+    .columns img {
+        width: 25%;
+    }
+
+    .columns ul {
+        height: inherit;
+    }
+
+    .vertical-align {
+        display: none;
+    }
+
+    .auto-height {
+        display: unset;
+    }
+
+    #a-propos .columns {
+        float: unset;
+        width: fit-content;
+    }
+
+    #a-propos .columns img {
+        height: 30vw;
+        width: auto !important;
+    }
+
+    .info {
+        height: fit-content;
+        position: unset;
+    }
+
+    .info p {
+        position: unset;
+        top: unset;
+        transform: unset;
+        margin: auto 5%;
+    }
+
+    #a-propos .columns {
+        border: none;
+    }
+
+    footer {
+        height: unset;
+    }
+
+    .banner {
+        display: none;
+    }
+
+    #light {
+        position: fixed !important;
+    }
+  }
+
+
+/*                                                               */
+/* _____________________________________________________________ */
+
+
+/* _____________________________________________________________ */
+/*                         VIDEO LIGHTBOX                        */
+.banner {
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    filter: blur(5px) opacity(0.5);
+    height: 100vh;
+}
+
+.banner__video {
+    position: relative;
+    left: 50%;
+    width: auto;
+    min-width: 100%;
+    height: auto;
+    min-height: 100%;
+    transform: translate(-50%,-5%);
+}
+
+
+#fade {
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1001;
+    -moz-opacity: 0.8;
+    opacity: .80;
+    filter: alpha(opacity=80);
+}
+  
+#light {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1002;
+    overflow: visible;
+}
+  
+#boxclose {
+    cursor: pointer;
+    color: #fff;
+    border: 1px solid #AEAEAE;
+    border-radius: 102px;
+    background: #222222;
+    font-size: 31px;
+    font-weight: bold;
+    line-height: 0px;
+    padding: 15px 11px;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    z-index: 1002;
+    opacity: 0.9;
+}
+  
+.boxclose:before {
+    content: "×";
+}
+
+#fade:hover ~ #boxclose {
+    display:none;
+}
+
+.test:hover ~ .test2 {
+    display: none;
+}
+
+
+/*                                                               */
+/* _____________________________________________________________ */
